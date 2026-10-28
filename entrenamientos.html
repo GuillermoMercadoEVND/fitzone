@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explora entrenamientos de fuerza, cardio y resistencia con FITZONE.">
+<meta name="description" content="Explora entrenamientos de fuerza, cardio y movilidad con FITZONE.">
 <meta name="theme-color" content="#101210">
 <title>FITZONE | Entrenamientos</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -38,6 +38,7 @@
 </div>
 </nav>
 </header>
+
 <main>
 <section class="inner-hero">
 <div class="container">
@@ -51,6 +52,7 @@
 </div>
 </div>
 </section>
+
 <section class="section-padding">
 <div class="container">
 <div class="section-heading">
@@ -58,8 +60,39 @@
 <h2>ELIGE CÓMO QUIERES <span>ENTRENAR.</span></h2>
 <p>Encuentra una modalidad que se adapte a tu experiencia y a los objetivos que quieres alcanzar.</p>
 </div>
-<div class="row g-4">
-<div class="col-md-6 col-lg-4">
+
+<div class="training-filters">
+<div class="training-search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input type="search" id="buscarEntrenamiento" placeholder="Buscar entrenamiento..." aria-label="Buscar entrenamiento">
+</div>
+<div class="training-filter-group">
+<label for="filtroCategoria">Categoría</label>
+<select id="filtroCategoria" class="form-select">
+<option value="todos">Todas las categorías</option>
+<option value="fuerza">Fuerza</option>
+<option value="cardio">Cardio</option>
+<option value="movilidad">Movilidad</option>
+</select>
+</div>
+<div class="training-filter-group">
+<label for="filtroNivel">Nivel</label>
+<select id="filtroNivel" class="form-select">
+<option value="todos">Todos los niveles</option>
+<option value="principiante">Principiante</option>
+<option value="intermedio">Intermedio</option>
+<option value="avanzado">Avanzado</option>
+</select>
+</div>
+<button type="button" id="limpiarFiltros" class="btn btn-outline-light">Limpiar filtros <i class="fa-solid fa-rotate-left ms-1"></i></button>
+</div>
+
+<div class="training-results">
+<p id="contadorEntrenamientos" aria-live="polite">Mostrando 3 entrenamientos</p>
+</div>
+
+<div class="row g-4" id="listaEntrenamientos">
+<div class="col-md-6 col-lg-4 training-item" data-categoria="fuerza" data-nivel="principiante intermedio avanzado" data-nombre="entrenamiento de fuerza desarrollo muscular pesas">
 <article class="training-card">
 <div class="training-image-wrap">
 <img class="training-image" src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85" alt="Persona entrenando con pesas en un gimnasio" loading="lazy">
@@ -77,7 +110,8 @@
 </div>
 </article>
 </div>
-<div class="col-md-6 col-lg-4">
+
+<div class="col-md-6 col-lg-4 training-item" data-categoria="cardio" data-nivel="principiante intermedio avanzado" data-nombre="entrenamiento cardiovascular cardio correr bicicleta resistencia">
 <article class="training-card">
 <div class="training-image-wrap">
 <img class="training-image" src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=900&q=85" alt="Persona realizando ejercicio cardiovascular" loading="lazy">
@@ -95,7 +129,8 @@
 </div>
 </article>
 </div>
-<div class="col-md-6 col-lg-4">
+
+<div class="col-md-6 col-lg-4 training-item" data-categoria="movilidad" data-nivel="principiante intermedio avanzado" data-nombre="movilidad resistencia equilibrio control corporal">
 <article class="training-card">
 <div class="training-image-wrap">
 <img class="training-image" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=85" alt="Persona realizando ejercicios de movilidad y acondicionamiento" loading="lazy">
@@ -113,9 +148,18 @@
 </div>
 </article>
 </div>
+
+<div class="col-12 d-none" id="sinEntrenamientos">
+<div class="training-empty">
+<i class="fa-solid fa-magnifying-glass"></i>
+<h3>No encontramos entrenamientos</h3>
+<p>Prueba con otra búsqueda o cambia los filtros seleccionados.</p>
+</div>
+</div>
 </div>
 </div>
 </section>
+
 <section class="training-tips section-padding">
 <div class="container">
 <div class="row align-items-center g-5">
@@ -148,6 +192,7 @@
 </div>
 </div>
 </section>
+
 <section class="cta-section">
 <div class="container">
 <div class="cta-content">
@@ -157,6 +202,7 @@
 </div>
 </section>
 </main>
+
 <footer class="footer-fitzone">
 <div class="container">
 <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
@@ -166,7 +212,12 @@
 </div>
 </div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script src="js/main.js"></script>
+
+<script src="js/entrenamientos.js"></script>
+
 </body>
 </html>
