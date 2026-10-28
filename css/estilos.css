@@ -29,3 +29,59 @@ font-weight: 800;
 a {
 text-decoration: none;
 }
+.navbar-fitzone {
+background-color: var(--color-fondo);
+padding: 20px 0;
+border-bottom: 1px solid #292D29;
+}
+
+.logo-fitzone {
+color: var(--color-texto);
+font-size: 28px;
+font-weight: 900;
+letter-spacing: -1px;
+}
+
+.logo-fitzone span {
+color: var(--color-principal);
+}
+
+.logo-fitzone .logo-point {
+color: var(--color-texto);
+}
+
+.navbar-fitzone .nav-link {
+color: #C5C9C2;
+font-size: 14px;
+font-weight: 600;
+transition: color 0.3s ease;
+}
+
+.navbar-fitzone .nav-link:hover,
+.navbar-fitzone .nav-link.active {
+color: var(--color-principal);
+}
+
+.btn-fitzone {
+background-color: var(--color-principal);
+color: #101210;
+border: 2px solid var(--color-principal);
+border-radius: 6px;
+padding: 11px 20px;
+font-weight: 800;
+transition: all 0.3s ease;
+}
+
+.btn-fitzone:hover {
+background-color: transparent;
+color: var(--color-principal);
+border-color: var(--color-principal);
+}
+
+.navbar-toggler {
+border-color: var(--color-principal);
+}
+
+.navbar-toggler:focus {
+box-shadow: 0 0 0 0.2rem rgba(182, 242, 58, 0.25);
+}
