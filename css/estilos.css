@@ -482,3 +482,392 @@ font-size: 24px;
 font-size: 32px;
 }
 }
+
+body,
+.navbar-fitzone,
+.program-card,
+.health-card,
+.registration-form,
+.benefit-card,
+.hero-floating-card {
+transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle {
+width: 43px;
+height: 43px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+border: 1px solid #3A4138;
+border-radius: 8px;
+background: transparent;
+color: var(--color-principal);
+font-size: 17px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+background: var(--color-principal);
+color: #101210;
+border-color: var(--color-principal);
+}
+
+.theme-toggle:focus-visible {
+outline: 2px solid var(--color-principal);
+outline-offset: 3px;
+}
+
+/* PALETA DEL TEMA CLARO */
+
+body.light-theme {
+--color-fondo: #F4F6F0;
+--color-superficie: #FFFFFF;
+--color-texto: #20251F;
+--color-principal: #628C18;
+background-color: var(--color-fondo);
+color: var(--color-texto);
+}
+
+body.light-theme .navbar-fitzone {
+background-color: #FFFFFF;
+border-bottom-color: #DCE2D6;
+}
+
+body.light-theme .navbar-fitzone .nav-link {
+color: #454D42;
+}
+
+body.light-theme .logo-fitzone {
+color: #20251F;
+}
+
+body.light-theme .hero-description,
+body.light-theme .section-heading > p,
+body.light-theme .health-card p,
+body.light-theme .program-card > p,
+body.light-theme .program-step p,
+body.light-theme .health-habit p,
+body.light-theme .registration-description {
+color: #555E51;
+}
+
+body.light-theme .stats-section,
+body.light-theme .program-steps,
+body.light-theme .health-routine {
+background: #E9EDE4;
+border-color: #D6DDD0;
+}
+
+body.light-theme .program-card,
+body.light-theme .health-card,
+body.light-theme .registration-form,
+body.light-theme .benefit-card {
+background: #FFFFFF;
+border-color: #D6DDD0;
+}
+
+body.light-theme .program-card h3,
+body.light-theme .health-card h3,
+body.light-theme .program-step h3,
+body.light-theme .health-habit h3,
+body.light-theme .form-header h2 {
+color: #20251F;
+}
+
+body.light-theme .registration-form .form-label {
+color: #30382D;
+}
+
+body.light-theme .registration-form .form-control,
+body.light-theme .registration-form .form-select {
+background-color: #FFFFFF;
+color: #20251F;
+border-color: #C8D0C1;
+}
+
+body.light-theme .registration-form .form-check {
+border-color: #D6DDD0;
+}
+
+body.light-theme .registration-form .form-check-label {
+color: #454D42;
+}
+
+body.light-theme .registration-form .form-check-input {
+background-color: #FFFFFF;
+border-color: #9AA591;
+}
+
+body.light-theme .registration-form .form-check-input:checked {
+background-color: var(--color-principal);
+border-color: var(--color-principal);
+}
+
+body.light-theme .health-reminder {
+background: #E9EDE4;
+border-color: #D6DDD0;
+}
+
+body.light-theme .health-reminder p,
+body.light-theme .registration-note,
+body.light-theme .form-privacy,
+body.light-theme .character-counter {
+color: #555E51;
+}
+
+body.light-theme .health-reminder h3 {
+color: #20251F;
+}
+
+body.light-theme .health-habit {
+border-color: #D6DDD0;
+}
+
+body.light-theme .program-card li {
+color: #454D42;
+border-color: #D6DDD0;
+}
+
+body.light-theme .program-link:hover {
+color: #20251F;
+}
+
+body.light-theme .health-number {
+color: #507415;
+}
+
+body.light-theme .theme-toggle {
+border-color: #C8D0C1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+body,
+.navbar-fitzone,
+.program-card,
+.health-card,
+.theme-toggle {
+transition: none;
+}
+}
+
+.training-card {
+height: 100%;
+overflow: hidden;
+background: var(--color-superficie);
+border: 1px solid #303630;
+border-radius: 12px;
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.training-card:hover {
+transform: translateY(-7px);
+border-color: var(--color-principal);
+}
+
+.training-image-wrap {
+height: 230px;
+position: relative;
+overflow: hidden;
+background: #1C211D;
+}
+
+.training-image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s ease;
+}
+
+.training-card:hover .training-image {
+transform: scale(1.06);
+}
+
+.training-category {
+position: absolute;
+left: 18px;
+bottom: 18px;
+background: var(--color-principal);
+color: #101210;
+padding: 7px 12px;
+border-radius: 4px;
+font-size: 10px;
+font-weight: 900;
+letter-spacing: 1px;
+}
+
+.training-card-content {
+padding: 25px;
+}
+
+.training-card-content .card-number {
+display: block;
+color: var(--color-principal);
+font-size: 10px;
+font-weight: 800;
+letter-spacing: 1px;
+margin-bottom: 12px;
+}
+
+.training-card-content h3 {
+font-size: 19px;
+font-weight: 900;
+line-height: 1.4;
+margin-bottom: 13px;
+}
+
+.training-card-content > p {
+color: #AEB5AC;
+font-size: 13px;
+line-height: 1.8;
+margin-bottom: 20px;
+}
+
+.training-details {
+display: flex;
+flex-wrap: wrap;
+gap: 10px 18px;
+padding: 15px 0;
+border-top: 1px solid #303630;
+border-bottom: 1px solid #303630;
+margin-bottom: 15px;
+}
+
+.training-details span {
+color: #B9C0B5;
+font-size: 11px;
+}
+
+.training-details i {
+color: var(--color-principal);
+margin-right: 5px;
+}
+
+.training-card-content .card-link {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+font-size: 11px;
+}
+
+.training-tips {
+background: #171B17;
+border-top: 1px solid #292D29;
+border-bottom: 1px solid #292D29;
+}
+
+.training-tips h2 {
+font-size: clamp(28px, 4vw, 42px);
+font-weight: 900;
+line-height: 1.25;
+margin: 20px 0;
+}
+
+.training-tips h2 span {
+color: var(--color-principal);
+}
+
+.training-tips > .container > .row > .col-lg-5 > p {
+color: #AEB5AC;
+font-size: 14px;
+line-height: 1.9;
+margin-bottom: 25px;
+}
+
+.tip-list {
+display: flex;
+flex-direction: column;
+}
+
+.tip-item {
+display: flex;
+gap: 18px;
+padding: 22px 0;
+border-bottom: 1px solid #343A33;
+}
+
+.tip-item:first-child {
+padding-top: 0;
+}
+
+.tip-icon {
+width: 48px;
+height: 48px;
+flex-shrink: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 9px;
+background: rgba(182, 242, 58, 0.10);
+color: var(--color-principal);
+font-size: 19px;
+}
+
+.tip-item h3 {
+font-size: 16px;
+font-weight: 800;
+margin-bottom: 8px;
+}
+
+.tip-item p {
+color: #AEB5AC;
+font-size: 13px;
+line-height: 1.8;
+margin-bottom: 0;
+}
+
+/* ADAPTACION DEL TEMA CLARO */
+
+body.light-theme .training-card {
+background: #FFFFFF;
+border-color: #D6DDD0;
+}
+
+body.light-theme .training-card-content h3,
+body.light-theme .tip-item h3 {
+color: #20251F;
+}
+
+body.light-theme .training-card-content > p,
+body.light-theme .training-details span,
+body.light-theme .tip-item p,
+body.light-theme .training-tips > .container > .row > .col-lg-5 > p {
+color: #555E51;
+}
+
+body.light-theme .training-details,
+body.light-theme .tip-item {
+border-color: #D6DDD0;
+}
+
+body.light-theme .training-tips {
+background: #E9EDE4;
+border-color: #D6DDD0;
+}
+
+@media (max-width: 767px) {
+.training-image-wrap {
+height: 210px;
+}
+
+.training-card-content {
+padding: 22px;
+}
+
+.training-card-content h3 {
+font-size: 18px;
+}
+
+.tip-item {
+gap: 14px;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.training-card,
+.training-image {
+transition: none;
+}
+}
